@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RubberJS Demo</title>
+	<style>
+	/* These style properties are mostly cosmetic and only added for demo purposes */
+	* {
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	body {
+		font-family: sans-serif;
+		display: flex;
+		flex-direction: column;
+	}
+	header {
+		padding: 60px 0 20px;
+		background-color: #fafafa;
+		border-bottom: 1px solid #eee;
+	}
+	section {
+		display: flex;
+		justify-content: center;
+		background-color: #fff;
+		box-sizing: border-box;
+		min-height: calc(100vh - 80px);
+		padding-top: 30px;
+	}
+	.container {
+		max-width: 750px;
+		padding: 0 20px;
+		display: flex;
+	}
+	header > .container {
+		flex-direction: column;
+		align-items: center;
+		margin: 0 auto;
+		text-align: center;
+	}
+	section > .container {
+		/* Yes, I like my websites to be responsive, even though there's nothing to demo for on mobile */
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: flex-start;
+	}
+	p {
+		max-width: 400px;
+		padding: 25px;
+		line-height: 1.65;
+	}
+	p span {
+		background-color: rgb(210, 40, 50);
+		color: #fff;
+		padding: 5px;
+	}
+	a {
+		color: #77f;
+	}
+	figure {
+		margin-top: 20px;
+		max-width: 300px;
+	}
+	figcaption {
+		font-size: .8rem;
+	}
+	img {
+		max-width: 100%;
+		border-radius: 5px;
+	}
+	button {
+		margin: 0 3px;
+		padding: 5px;
+		border-radius: 3px;
+		background-color: #ff0;
+		border: 1px solid rgba(0, 0, 0, .3);
+		transition: background-color .3s ease;
+	}
+	button:hover {
+		background-color: #dd0;
+	}
+	button.toggled {
+		color: #fff;
+		background-color: #f0f;
+	}
+	button.toggled:hover {
+		background-color: #d0d;
+	}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1>RubberJS demo</h1>
+			<a href="https://github.com/JouanMarcel/RubberJS" target="_blank">Get it on Github</a>
+		</div>
+	</header>
+	<section>
+		<div class="container">
+			<figure>
+				<a href="https://www.instagram.com/p/BnrVNA_F95p/" target="_blank"><img src="photo.jpg" alt=""></a>
+				<figcaption>
+					Image is linked as well, photo by <a href="https://jouanmarcel.com" target="_blank">Jouan Marcel</a>
+				</figcaption>
+			</figure>
+			<p>Move your cursor. Hover over links (or other interactive elements like<button onclick="this.classList.toggle('toggled')">buttons</button>) to see, how the cursor expands to signal a clickable link. It always displays the color difference of the object it sits on. Put the cursor on the photo to see how it behaves for <span>different color</span>. Move it fast to see it squash and stretch according to one of the <a href="https://en.wikipedia.org/wiki/12_basic_principles_of_animation#Squash_and_Stretch" target="_blank">basic principles of animations</a>.</p>
+		</div>
+	</section>
+	<script src="rubber.js"></script>
+	<script> let rubber = new Rubber() </script>
+</body>
+</html>
