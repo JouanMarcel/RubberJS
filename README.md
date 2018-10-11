@@ -15,10 +15,11 @@ It will fetch a list of native interactive elements on its own, you can add the 
 
 ## Options
 Options are passed as object (eg `<script> let rubber = new Rubber({ minWidth: 960 }) </script>`)  
-**minWidth** *(number)*  
+  
+### **minWidth** *(number)*  
 The minimum width the browser window needs for it to display. On mobile we want it disabled of course, as there's no cursor.  
 *Default: 1280*
   
-**minWidth** *(array of string)*  
+### **minWidth** *(array of string)*  
 The minimum width the browser window needs for it to display. On mobile we want it disabled of course, as there's no cursor.  
 *Default: ['a', 'input', 'select', 'button', 'textarea', 'label[for]', '\*[data-rubber]']*
